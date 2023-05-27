@@ -3,10 +3,10 @@ import random
 import openai
 
 # Set up your OpenAI API credentials
-openai.api_key = 'YOUR_API_KEY'
+openai.api_key = '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'
 
 # Load the CSV file
-def load_options():
+def load_options(): 
     options = []
     with open('options.csv', 'r') as file:
         reader = csv.DictReader(file)
@@ -23,7 +23,6 @@ def generate_response(prompt):
         temperature=0.7,
         n=1,
         stop=None,
-        temperature=0.7
     )
     return response.choices[0].text.strip()
 
